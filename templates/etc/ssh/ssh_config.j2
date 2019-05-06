@@ -18,7 +18,7 @@
 # ssh_config(5) man page.
 
 Host *
-    ForwardAgent no
+#    ForwardAgent no
 #   ForwardX11 no
 #   RhostsRSAAuthentication no
 #   RSAAuthentication yes
@@ -49,6 +49,6 @@ Host *
 #   VisualHostKey no
 #   ProxyCommand ssh -q -W %h:%p gateway.example.com
 #   RekeyLimit 1G 1h
-    SendEnv LANG LC_*
-    HashKnownHosts no
+#    SendEnv LANG LC_*
+    HashKnownHosts yes
     VerifyHostKeyDNS ask

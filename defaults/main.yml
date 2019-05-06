@@ -16,18 +16,18 @@ ssh_daemon_ports:
 #   - yes (password and publickey)
 #   - no (not allowed)
 #   - without-password (only allowed with publickey)
-ssh_daemon_permit_root_login: 'yes'
+ssh_daemon_permit_root_login: 'prohibit-password'
 
 # Allow password authentication.
-ssh_daemon_password_authentication: 'yes'
+ssh_daemon_password_authentication: 'no'
 
 # Enable or disable the sshd X11 forwarding.
 ssh_daemon_x11_forwarding: 'no'
 
 # Environment variables to accept by sshd.
-ssh_daemon_accept_env:
-  - 'LANG'
-  - 'LC_*'
+ssh_daemon_accept_env: []
+#  - 'LANG'
+#  - 'LC_*'
 
 # A list of places to search for authorized keys files.
 # CentOS 6 doesn't support multiple places, so default is just

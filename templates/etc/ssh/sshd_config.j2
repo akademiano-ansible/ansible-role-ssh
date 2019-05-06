@@ -93,24 +93,23 @@ ChallengeResponseAuthentication no
 # and ChallengeResponseAuthentication to 'no'.
 UsePAM yes
 
-AllowAgentForwarding no
-#AllowTcpForwarding yes
+AllowAgentForwarding yes
+AllowTcpForwarding yes
 #GatewayPorts no
-X11Forwarding {{ ssh_daemon_x11_forwarding }}
+X11Forwarding yes
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
-PrintMotd no # pam does that
+PrintMotd no
 #PrintLastLog yes
-TCPKeepAlive yes
+#TCPKeepAlive yes
 #UseLogin no
-#UsePrivilegeSeparation sandbox
 #PermitUserEnvironment no
 #Compression delayed
 #ClientAliveInterval 0
 #ClientAliveCountMax 3
 #UseDNS no
-#PidFile /run/sshd.pid
+#PidFile /var/run/sshd.pid
 #MaxStartups 10:30:100
 #PermitTunnel no
 #ChrootDirectory none
